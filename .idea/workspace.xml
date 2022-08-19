@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4d83e3f-c838-4032-9a12-f2390cbc0a52" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/Bridgelabz/JDBC_Employee_Payroll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Bridgelabz/JDBC_Employee_Payroll.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
