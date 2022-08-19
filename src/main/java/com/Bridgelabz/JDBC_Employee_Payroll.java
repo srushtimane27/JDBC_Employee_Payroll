@@ -8,7 +8,7 @@ public class JDBC_Employee_Payroll {
         Connection con = null;
         PreparedStatement stm = null;
 
-        String query = "select * from payroll_service.employee";
+        String query = "select * from payroll_service.employee_payroll";
         Scanner sc = new Scanner(System.in);
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -21,23 +21,21 @@ public class JDBC_Employee_Payroll {
             System.out.println("platform created");
 
             System.out.println("Please insert the id to fetch the particular record");
-            int userId = sc.nextInt();
+            int UserId = sc.nextInt();
 
 
             ResultSet rs = stm.executeQuery();
 
             if(rs.next()){
                 int id = rs.getInt("id");
-                int company_id = rs.getInt(2);
-                String name = rs.getString(3);
-                int phone_number = rs.getInt(4);
-                String address = rs.getString(5);
-                String gender = rs.getString(6);
-                Date start = rs.getDate(7);
+                String name = rs.getString(2);
+                String gender = rs.getString(3);
+                double basic_pay = rs.getDouble(4);
+                Date start = rs.getDate(5);
 
-                System.out.println("User id -> "+id+ "Company_id -> "+company_id+ "User name -> "+name+ "User phone_number -> "+phone_number+ "User address -> "+address+ "User gender -> "+gender+ "User date -> "+start);
+                System.out.println("User id -> "+id+ "User Name -> "+name+ "User Gender -> "+gender+ "User Basic_Pay -> "+basic_pay+ "User Date -> "+start);
             }else{
-                System.out.println("No record found with userId: " +userId);
+                System.out.println("No record found with userId: " +UserId);
             }
 
             //     System.out.println("Data inserted");
