@@ -20,16 +20,16 @@ public class JDBC_Employee_Payroll {
             stm = con.prepareStatement(query);
             System.out.println("platform created");
 
-            System.out.println("Please insert the id to fetch the particular record");
-            int userId = sc.nextInt();
+            System.out.println("Please insert the name to fetch the particular record");
+            int Username = sc.nextInt();
 
 
             ResultSet rs = stm.executeQuery();
 
             if(rs.next()){
-                int id = rs.getInt("id");
+                int id = rs.getInt(1);
                 int company_id = rs.getInt(2);
-                String name = rs.getString(3);
+                String name = rs.getString("name");
                 int phone_number = rs.getInt(4);
                 String address = rs.getString(5);
                 String gender = rs.getString(6);
@@ -37,7 +37,7 @@ public class JDBC_Employee_Payroll {
 
                 System.out.println("User id -> "+id+ "Company_id -> "+company_id+ "User name -> "+name+ "User phone_number -> "+phone_number+ "User address -> "+address+ "User gender -> "+gender+ "User date -> "+start);
             }else{
-                System.out.println("No record found with userId: " +userId);
+                System.out.println("No record found with userName: " +Username);
             }
 
             //     System.out.println("Data inserted");
