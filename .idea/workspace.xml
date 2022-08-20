@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4d83e3f-c838-4032-9a12-f2390cbc0a52" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/Bridgelabz/UC8_Add_Payroll.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/Bridgelabz/UC11_Add_New_Employee.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +42,22 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.UC8_Add_Payroll">
+  <component name="RunManager" selected="Application.UC11_Add_New_Employee">
     <configuration name="JDBC_Employee_Payroll" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.Bridgelabz.JDBC_Employee_Payroll" />
+      <module name="JDBC_Employee_Payroll" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.Bridgelabz.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UC11_Add_New_Employee" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.Bridgelabz.UC11_Add_New_Employee" />
       <module name="JDBC_Employee_Payroll" />
       <extension name="coverage">
         <pattern>
@@ -85,6 +97,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UC11_Add_New_Employee" />
         <item itemvalue="Application.UC8_Add_Payroll" />
         <item itemvalue="Application.UC7_Add_New_Employee" />
         <item itemvalue="Application.JDBC_Employee_Payroll" />
