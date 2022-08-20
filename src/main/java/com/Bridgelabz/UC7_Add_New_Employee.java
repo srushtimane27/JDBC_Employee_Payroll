@@ -1,15 +1,13 @@
 package com.Bridgelabz;
 
 import java.sql.*;
-import java.util.Scanner;
 
-public class JDBC_Employee_Payroll {
+public class UC7_Add_New_Employee {
     public static void main(String[] args) {
         Connection con = null;
         PreparedStatement stm = null;
+        String query = "insert into payroll_service.employee_payroll values(?,?,?,?)";
 
-        String query = "select * from payroll_service.employee_payroll where name = ? ";
-        Scanner sc = new Scanner(System.in);
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             System.out.println("driver register");
@@ -20,26 +18,13 @@ public class JDBC_Employee_Payroll {
             stm = con.prepareStatement(query);
             System.out.println("platform created");
 
-            System.out.println("Please insert the name to fetch the particular record");
-            String userName = String.valueOf(sc.nextInt());
-            stm.setString(1, userName);
+            stm.setInt(1, 4);
+            stm.setString(2, "Akshay");
+            stm.setDouble(3,4000000);
+            stm.setDate(4, new Date(2019-5-15));
+            stm.executeUpdate();
 
-
-            ResultSet rs = stm.executeQuery();
-
-            if(rs.next()){
-                int id = rs.getInt("id");
-                String name = rs.getString(2);
-                String gender = rs.getString(3);
-                double basic_pay = rs.getDouble(4);
-                Date start = rs.getDate(5);
-
-                System.out.println("User id -> "+id+ "User Name -> "+name+ "User Gender -> "+gender+ "User Basic_Pay -> "+basic_pay+ "User Date -> "+start);
-            }else{
-                System.out.println("No record found with userName: " +userName);
-            }
-
-
+            System.out.println("Data inserted");
 
         }catch (Exception e){
             System.out.println(e.getMessage());
@@ -56,9 +41,6 @@ public class JDBC_Employee_Payroll {
                     stm.close();
                 }catch (SQLException s){
                     System.out.println(s.getMessage());
-
-                }if (sc != null){
-                    sc.close();
                 }
             }
         }
